@@ -1,0 +1,19 @@
+/* Align icons to left */
+#what .items .item {
+  display: flex;
+  text-align: left;
+}
+
+/* Position icon */
+#what .items .item i {
+  margin-right: 1.3rem;
+  /* To fix the icon Alignment */
+  align-self: center;
+  /* To clear the margin bottom from style.css file */
+  margin-bottom: 0;
+}
+
+#contact .map {
+  /* To make the map bigger than the form which has flex: 1 */
+  flex: 2;
+}

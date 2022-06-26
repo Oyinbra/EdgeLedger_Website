@@ -1,0 +1,265 @@
+/* Imported Google Font */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1100px;
+  /* to align at the middle */
+  margin: auto;
+
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #93cb52;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-primary {
+  background: #93cb52;
+  color: #fff;
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1em;
+}
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1em;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.py-1 {padding: 1.5rem 0;}
+.py-2 {padding: 2rem 0;}
+.py-3 {padding: 3rem 0;}
+
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #93cb52;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #7ab436;
+}
+
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+
+.list {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted #444;
+}
+
+
+/* NAVBAR */
+#navbar {
+  /* will flex the nav and ul but ignore the child element */
+  display: flex;
+  /* to stick it to the top */
+  position: sticky;
+  top: 0;
+
+  background: #333;
+  color: #fff;
+  /* to display horizontally with space between */
+  justify-content: space-between;
+  /* to position the element on top, property 2 takes priority */
+  z-index: 1;
+
+  padding: 1rem;
+  /* overflow: hidden; */
+}
+
+#navbar ul {
+  /* align horizontally with float property */
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+  background: #93cb52;
+  border-radius: 5px;
+}
+
+/* SHOWCASE */
+#showcase {
+  background: #333 url("../img/showcase.jpg") no-repeat center center/cover;
+  /* to display the whole image */
+  height: 100vh;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  /* to display item vertically */
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* add height property to the element for it to justify-item */
+  height: 100%;
+  padding: 0 2rem;
+  /* overlay */
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* the last property is opacity */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* SECTION: What We Do */
+#what .items {
+  /* to align boxes horizontally */
+  display: flex;
+  padding: 1rem;
+}
+
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+#what .items .item i {
+  background: #93cb52;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* SECTION who We Are */
+#who {
+  /* Align all element horizontally */
+  display: flex;
+}
+
+#who div {
+  /* equally align elements */
+  flex: 1;
+}
+
+#who .who-img {
+  background: url("../img/people.jpg") no-repeat center center/cover;
+}
+
+/* SECTION: CLIENTS  */
+#clients .items {
+  /* to align the elements horizontally */
+  display: flex;
+}
+
+#clients .items img {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
+/* SECTION: Contact */
+#contact{
+  display: flex;
+}
+
+#contact .map,
+#contact .contact-form{
+  /* to make the elements even after displaying as flex in the above style */
+  flex: 1;
+}
+
+#contact .contact-form .form-group {
+  margin: .7rem;
+}
+
+#contact .contact-form label {
+  display: block;
+}
+
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: .5rem;
+  border: solid 1px #444;
+  border-radius: .62rem;
+}
+
+/* Input and textarea focus styling  */
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+  /* to remove the color on outline border when selecting on input */
+  outline: none;
+
+  border-color: #93cb52;
+}
